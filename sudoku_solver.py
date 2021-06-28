@@ -4,10 +4,11 @@
 # In[1]:
 
 
-import cv2
 import numpy as np
-import pickle
 import time
+import pickle
+import cv2
+
 
 # Model initialization
 def initialize():
@@ -16,7 +17,7 @@ def initialize():
     return model
 
 
-# 1.. Preprocessing image
+# 1.Image Preprocessing
 def preProcess(img):
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     imgBlur = cv2.GaussianBlur(imgGray, (5, 5), 1)
@@ -186,11 +187,11 @@ import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = 3
 
 
-##########################################
+##
 heightImg = 450
 widthImg = 450
 model = initialize()
-##########################################
+##
 
 
 def sudoku_solver(pathImage):

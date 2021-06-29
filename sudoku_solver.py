@@ -239,8 +239,13 @@ def sudoku_solver(pathImage):
         # 5. Find Solution
         board = np.array(numbers)
         board = board.reshape(9,9)
+        
+        print("UNSOLVED SUDOKU")
+        print_board(board)
 
         solve(board)
+        print("SOLVED SUDOKU")
+        print_board(board)
 
         flatList = []
         for sublist in board:
